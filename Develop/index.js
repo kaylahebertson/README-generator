@@ -2,6 +2,7 @@
 import inquirer from 'inquirer';
 import fs from 'fs';
 import path from 'path';
+import generateMarkdown from './utils/generateMarkdown';
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -30,12 +31,11 @@ const questions = [
         name: 'usage',
         message: 'How is your project meant to be used?',
     },
-    // TODO: license choices
     {
         type: 'input',
         name: 'license',
         message: 'Which license should your project have?',
-        choices: [''],
+        choices: ['MIT', 'Apache', 'GPL', 'None'],
     },
     {
         type: 'input',
@@ -47,11 +47,15 @@ const questions = [
         name: 'tests',
         message: 'What command is used to run tests?',
     },
-    // TODO: github username, email should be added to questions
     {
         type: 'input',
-        name: 'questions',
-        message: '.',
+        name: 'github',
+        message: 'What is your GitHub username?',
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email address?',
     }
 ];
 
@@ -62,7 +66,12 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions)
+        .then((answers) => {
+            writeToFile('README.md', generateMarkdown(answers));
+        });
+}
 
 // Function call to initialize app
 init();
