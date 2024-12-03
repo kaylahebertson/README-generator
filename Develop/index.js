@@ -15,12 +15,6 @@ const questions = [
         name: 'description',
         message: 'Write a brief description of your project.',
     },
-    // TODO: figure out how to add a table of contents
-    {
-        type: 'input',
-        name: 'table of contents',
-        message: '',
-    },
     {
         type: 'input',
         name: 'installation',
