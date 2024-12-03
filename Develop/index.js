@@ -1,7 +1,7 @@
 import inquirer from 'inquirer';
 import fs from 'fs';
 import path from 'path';
-import generateMarkdown from './utils/generateMarkdown';
+import generateMarkdown from './utils/generateMarkdown.js';
 
 const questions = [
     {
@@ -25,7 +25,7 @@ const questions = [
         message: 'How is your project meant to be used?',
     },
     {
-        type: 'input',
+        type: 'list',
         name: 'license',
         message: 'Which license should your project have?',
         choices: ['MIT', 'Apache', 'GPL', 'None'],

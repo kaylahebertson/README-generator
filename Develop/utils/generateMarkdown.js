@@ -2,24 +2,19 @@ function renderLicenseBadge(license) {
     if (license === 'MIT') {
         return `![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)`;
     } else if (license === 'Apache') {
-        return `![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`;
+        return `![License: Apache](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`;
     } else if (license === 'GPL') {
-        return `![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)`;
+        return `![License: GPL ](https://img.shields.io/badge/License-GPLv3-blue.svg)`;
     } else {
         return '';
     }
 }
 
 function renderLicenseLink(license) {
-    if (license === 'MIT') {
-        return `[MIT](https://opensource.org/licenses/MIT)`;
-    } else if (license === 'Apache') {
-        return `[Apache](https://opensource.org/licenses/Apache-2.0)`;
-    } else if (license === 'GPL') {
-        return `[GPL](https://opensource.org/licenses/gpl-3.0)`;
-    } else {
-        return '';
-    }
+  if (license !== 'None') {
+    return '\n* [License](#license)\n';
+  }
+  return '';
 }
 
 function renderLicenseSection(license) {
@@ -27,7 +22,7 @@ function renderLicenseSection(license) {
         return '';
     } else {
         return `## License
-        This project is licensed under the ${license} license.`;
+This project is licensed under the ${license} license.`;
     }
 }
 
@@ -36,14 +31,15 @@ function generateMarkdown(data) {
 ${renderLicenseBadge(data.license)}
 
 ## Description
+
 ${data.description}
+
 ## Table of Contents
 
 * [Installation](#installation)
 
 * [Usage](#usage)
 ${renderLicenseLink(data.license)}
-* [License](#license)
 
 * [Contributing](#contributing)
 
@@ -52,17 +48,34 @@ ${renderLicenseLink(data.license)}
 * [Questions](#questions)
 
 ## Installation
+
+To install necessary dependencies, run the following command:
+
+\`\`\`
 ${data.installation}
+\`\`\`
+
 ## Usage
+
 ${data.usage}
-## License
+
 ${renderLicenseSection(data.license)}
+
 ## Contributing
+
 ${data.contributing}
+
 ## Tests
+
+To run tests, run the following command:
+
+\`\`\`
 ${data.tests}
+\`\`\`
+
 ## Questions
-If you have any questions, please contact me at ${data.email}. You can also find me on GitHub at [${data.github}](
+
+If you have any questions, please contact me at ${data.email}. You can also find me on GitHub. My username is ${data.github}.
 `;
 }
 
