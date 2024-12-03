@@ -1,15 +1,17 @@
-# k
-
+# Kayla's Awesome Project
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
 ## Description
 
-j
+This was made using the README generator
 
 ## Table of Contents
 
 * [Installation](#installation)
 
 * [Usage](#usage)
+
+* [License](#license)
 
 
 * [Contributing](#contributing)
@@ -23,27 +25,28 @@ j
 To install necessary dependencies, run the following command:
 
 ```
-j
+npm i
 ```
 
 ## Usage
 
-k
+It is used to quickly create a README
 
-
+## License
+This project is licensed under the MIT license.
 
 ## Contributing
 
-l
+Feel free to contact me with ideas for improvement.
 
 ## Tests
 
 To run tests, run the following command:
 
 ```
-k
+npm test
 ```
 
 ## Questions
 
-If you have any questions, please contact me at k. You can also find me on GitHub. My username is k.
+If you have any questions, please contact me at kayla.hebertson@gmail.com. You can also find me on GitHub. My username is kaylahebertson.
