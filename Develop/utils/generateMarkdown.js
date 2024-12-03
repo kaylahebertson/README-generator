@@ -43,7 +43,7 @@ function generateMarkdown(data) {
 ${renderLicenseBadge(data.license)}
 
 ## Description
-
+${data.description}
 ## Table of Contents
 
 * [Installation](#installation)
@@ -59,16 +59,17 @@ ${renderLicenseBadge(data.license)}
 * [Questions](#questions)
 
 ## Installation
-
+${data.installation}
 ## Usage
-
+${data.usage}
 ## License
-
+${renderLicenseSection(data.license)}
 ## Contributing
-
+${data.contributing}
 ## Tests
-
+${data.tests}
 ## Questions
+If you have any questions, please contact me at ${data.email}. You can also find me on GitHub at [${data.github}](
 `;
 }
 
