@@ -1,9 +1,9 @@
 # Kayla's Awesome Project
-![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+![License: Apache](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 
 ## Description
 
-This was made using the README generator
+This README was made with the README Generator!
 
 ## Table of Contents
 
@@ -30,14 +30,14 @@ npm i
 
 ## Usage
 
-It is used to quickly create a README
+To create READMEs
 
 ## License
-This project is licensed under the MIT license.
+This project is licensed under the Apache license.
 
 ## Contributing
 
-Feel free to contact me with ideas for improvement.
+Feel free to let me know how I can improve.
 
 ## Tests
 
